@@ -1,53 +1,22 @@
-/*const a = 21;
-b = a - 5;
-a = 4;
-console.log(a, b);
-*/
-/*
-String
-const what = "Isabell";
+/*function sayHello(name, age) {
+  return `Hello ${name} you are ${age} years old`;
+}
 
-console.log(what);
+const greetNicolas = sayHello("Nicolas", 15);
+//greetNicolas는 sayHello의 return값
 */
-/*
-Boolean;
-const i = true;
-*/
-/*
-Number
-const wat=666;
- 
- */
-/*
-//Float
-const wat = 55.5;
-console.log(wat);
 
-*/
-const something = "Something";
-const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", something];
-console.log(daysOfWeek);
-
-const info = {
-  name: "SB",
-  age: 21,
-  gender: "male",
-  job: "Airman",
-  favMovies: ["Frozen2", "coco"],
-  favFood: [
-    {
-      name: "Kimchi",
-      fatty: false,
-    },
-    {
-      name: "Cheese burger",
-      fatty: false,
-    },
-  ],
+const calculator = {
+  plus: function (a, b) {
+    return a + b;
+  },
+  minus: function (a, b) {
+    return a - b;
+  },
 };
-console.log(info.gender);
-info.gender = "Female";
+//console.log(greetNicolas);
 
-console.log(info.gender);
-
-console.log(info);
+const plus = calculator.plus(5, 5);
+const minus = calculator.minus(10, 5);
+console.log(plus);
+console.log(minus);
