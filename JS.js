@@ -21,7 +21,36 @@ const minus = calculator.minus(10, 5);
 console.log(plus);
 console.log(minus);
 */
-
+/*
 const title = document.getElementById("title");
+title.innerHTML = "Hi! From SkyBuddy5";
+title.style.color = "red";
+document.title = "i own you now";
+console.log(document);
+*/
+/*
+const title = document.querySelector("#title");
 
-console.log(title);
+function handleClick() {
+  title.style.color = "blue";
+}
+title.addEventListener("click", handleClick);
+*/
+if (10 === 10 || 10 === 20) {
+  console.log("hi");
+} else if ("10" === "10") {
+  console.log("ho");
+} else {
+}
+
+const la = "kakak";
+
+const age = prompt("How old are you");
+
+if (age >= 18 && age <= 21) {
+  console.log("u can drink but you should not");
+} else if (age > 21) {
+  console.log("go ahead");
+} else {
+  console.log("u cant");
+}
