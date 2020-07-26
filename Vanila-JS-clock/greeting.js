@@ -10,7 +10,7 @@ function saveName(text) {
 }
 
 function handleSubmit(event) {
-  event.preventDefault();
+  event.preventDefault(); //textbox에 입력했을 때 새로고침 되는 것을 방지
   const currentValue = input.value;
   paintGreeting(currentValue);
   saveName(currentValue);
