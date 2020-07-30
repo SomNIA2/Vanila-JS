@@ -43,3 +43,17 @@ const cl = {
 }; //오브젝트로 만들기
 const pl = cl.pls(5, 5);
 console.log(pl);
+
+const tit = document.getElementById("title");
+console.log(tit);
+const title = document.querySelector("#title");
+console.dir(title);
+
+title.innerHTML = "이거지";
+title.style.color = "red";
+document.title = "ㅇㅇ";
+
+function doNot() {
+  title.style.color = "rgb(190, 223, 236)";
+}
+title.addEventListener("click", doNot);
