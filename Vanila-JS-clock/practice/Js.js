@@ -1,4 +1,4 @@
-const obj = {
+/*const obj = {
   name: "SB",
   gender: "Male",
   favFood: [
@@ -57,3 +57,44 @@ function doNot() {
   title.style.color = "rgb(190, 223, 236)";
 }
 title.addEventListener("click", doNot);
+*/
+/*
+const title = document.querySelector("#title");
+console.dir(title);
+
+const BASE_COLOR = "rgb(190, 223, 236)";
+const OTHER_COLOR = "rgb(160,200, 210)";
+
+function eventClick() {
+  const currentColor = title.style.color;
+  if (currentColor === BASE_COLOR) {
+    title.style.color = OTHER_COLOR;
+  } else {
+    title.style.color = BASE_COLOR;
+  }
+}
+
+function init() {
+  title.style.color = BASE_COLOR;
+  title.addEventListener("click", eventClick);
+}
+init();*/
+
+const title = document.querySelector("#title");
+
+const clickedTitle = "clicked";
+function ifClicked() {
+  /*
+  const hasClass = title.classList.contains(clickedTitle);
+  if (!hasClass) {
+    title.classList.add(clickedTitle);
+  } else {
+    title.classList.remove(clickedTitle);
+  }*/
+  title.classList.toggle(clickedTitle);
+}
+function init() {
+  document.addEventListener("click", ifClicked);
+}
+
+init();
