@@ -1,14 +1,19 @@
 const todoForm = document.querySelector(".js-todoform"),
-  todoInput = todoForm.querySelector(input),
+  toDoInput = todoForm.querySelector("input"),
   toDoList = document.querySelector(".js-todolist");
 
 const toDoList_LS = "toDos";
 
 function handleSubmit(event) {
-  todoForm.preventDefault();
+  event.preventDefault();
+  const inputValue = input.value;
   const currentValue = toDoInput.value;
+  saveToDolist(inputValue);
+  toDoInput.value = "";
 }
-
+function saveToDolist(text) {
+  localStorage.setItem(toDoList_LS, text);
+}
 function loadToDoList() {
   const toDos = localStorage.getItem(toDoList_LS);
   if (toDos !== null) {
