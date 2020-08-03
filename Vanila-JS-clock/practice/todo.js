@@ -2,27 +2,34 @@ const todoForm = document.querySelector(".js-todoform"),
   toDoInput = todoForm.querySelector("input"),
   toDoList = document.querySelector(".js-todolist");
 
-const toDoList_LS = "toDos";
+const TODOS_LS = "toDos";
 
+function createListToDo(text) {
+  const li = document.createElement("li");
+  const delBtn = document.createElement("button");
+  delBtn.innerText = "x";
+  const span = document.createElement("span");
+  span.innerText = text;
+  li.appendChild(delBtn);
+  li.appendChild(span);
+  toDoList.appendChild(li);
+}
 function handleSubmit(event) {
-  event.preventDefault();
-  const inputValue = input.value;
+  event.preventDefault(); //헷갈리는 부분 event.preventDefault가 왜 event뒤에 붙는가
+  // 폼 태그를 초기화하지 않으려고 preventDefault()를 사용하는 건데 toDoInput.뒤에 사용하면 안되나여??..
   const currentValue = toDoInput.value;
-  saveToDolist(inputValue);
+  createListToDo(currentValue);
   toDoInput.value = "";
 }
-function saveToDolist(text) {
-  localStorage.setItem(toDoList_LS, text);
-}
-function loadToDoList() {
-  const toDos = localStorage.getItem(toDoList_LS);
+
+function loadToDos() {
+  const toDos = localStorage.getItem(TODOS_LS);
   if (toDos !== null) {
+  } else {
   }
 }
-
 function init() {
-  loadToDoList();
-
+  loadToDos();
   todoForm.addEventListener("submit", handleSubmit);
 }
 init();
